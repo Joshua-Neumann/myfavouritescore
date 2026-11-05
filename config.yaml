@@ -1,0 +1,38 @@
+schema_version: 3
+campaign:
+  name: "myfavouritescore"
+  title: "My favourite title"
+  description: "Describe the campaign"
+  instigator: "5521800"
+  repo_id: 1446861686
+  language: "en"
+  license: "CC-BY-4.0"
+automation:
+  central_repository: "lets-encode/lets-encode"
+  ref: "staging"
+  path: "scripts/coordinator.ts"
+source:
+  kind: "physical-only"
+  images: []
+  header:
+    title: "Title of the source goes here"
+    composer: "Bach I think"
+    publisher: ""
+    date: ""
+  rights_acknowledged: "1"
+pieces:
+  - id: "piece-01"
+    kind: "physical-only"
+    path: "sources/piece-01/score.mei"
+    zones: []
+    header:
+      title: "Title of the source goes here"
+      composer: "Bach I think"
+fragmentation:
+  strategy: "by-piece"
+validation:
+  required_validations: 1
+  pass_threshold: 1
+locking:
+  stale_after_minutes: 1440
+  max_claims_per_person: 10
